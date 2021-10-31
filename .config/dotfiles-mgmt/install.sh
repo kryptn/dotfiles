@@ -1,4 +1,4 @@
-echo ".cfg" >> .gitignore
+
 
 git clone --bare https://github.com/kryptn/dotfiles.git $HOME/.cfg
 
