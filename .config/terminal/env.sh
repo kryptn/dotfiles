@@ -4,20 +4,33 @@
 # export PATH=/home/david/.nimble/bin:$PATH
 
 # golang
-export PATH=$PATH:/usr/local/go/bin:/home/david/go/bin
+
+if command -v go &> /dev/null
+then
+    export PATH=$PATH:/usr/local/go/bin:/$HOME/go/bin
+fi
 
 # pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
 
-eval "$(pyenv init --path)"
-eval "$(pyenv virtualenv-init -)"
+if command -v pyenv &> /dev/null
+then
+    export PYENV_ROOT="$HOME/.pyenv"
+    export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init --path)"
+    eval "$(pyenv virtualenv-init -)"
+fi
 
 # set python breakpoint tool
 export PYTHONBREAKPOINT="pudb.set_trace"
 
 # rust
-export PATH="$HOME/.cargo/bin:$PATH"
+if command -v cargo &> /dev/null
+then
+
+    export PATH="$HOME/.cargo/bin:$PATH"
+fi
+
+
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
