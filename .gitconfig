@@ -1,0 +1,7 @@
+[user]
+	name = kryptn
+	email = kryptn@gmail.com
+[init]
+	defaultBranch = main
+[core]
+	excludesFile = ~/.gitignore
