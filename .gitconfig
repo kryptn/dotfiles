@@ -1,14 +1,14 @@
 [user]
-	name = kryptn
-	email = kryptn@gmail.com
+    name = kryptn
+    email = kryptn@gmail.com
 
 [init]
-	defaultBranch = main
+    defaultBranch = main
 [core]
-	excludesFile = ~/.gitignore
+    excludesFile = ~/.gitignore
     pager = delta
 [diff]
-	colorMoved = default
+    colorMoved = default
 
 [delta]
     plus-style = "syntax #012800"
