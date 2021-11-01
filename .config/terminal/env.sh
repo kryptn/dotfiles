@@ -39,3 +39,13 @@ export NVM_DIR="$HOME/.nvm"
 
 # haskell
 # [ -f "/home/david/.ghcup/env" ] && source "/home/david/.ghcup/env" # ghcup-env
+
+
+# kube contexts
+export KUBECONFIG=~/.kube/config
+for file in ~/.kube/*.yaml
+do
+  export KUBECONFIG=$KUBECONFIG:$file
+done
+
+[ -s "$HOME/.config/terminal/work.sh" ] && \. "$HOME/.config/terminal/work.sh"

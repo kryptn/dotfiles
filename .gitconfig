@@ -1,33 +1,20 @@
 [user]
 	name = kryptn
 	email = kryptn@gmail.com
+
 [init]
 	defaultBranch = main
 [core]
 	excludesFile = ~/.gitignore
+    pager = delta
 [diff]
 	colorMoved = default
 
-[pager]
-    diff = delta
-    log = delta
-    reflog = delta
-    show = delta
+[delta]
+    plus-style = "syntax #012800"
+    minus-style = "syntax #340001"
+    syntax-theme = Monokai Extended
+    navigate = true
 
 [interactive]
-    diffFilter = delta --color-only --features=interactive
-
-[delta]
-    features = decorations
-
-[delta "interactive"]
-    keep-plus-minus-markers = false
-
-[delta "decorations"]
-    commit-decoration-style = blue ol
-    commit-style = raw
-    file-style = omit
-    hunk-header-decoration-style = blue box
-    hunk-header-file-style = red
-    hunk-header-line-number-style = "#067a00"
-    hunk-header-style = file line-number syntax
+    diffFilter = delta --color-only
