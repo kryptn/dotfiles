@@ -20,7 +20,7 @@ Plug 'yamatsum/nvim-cursorline'
 call plug#end()
 
 syntax enable
-colorscheme molokai
+colorscheme sonokai
 
 set number
 set linespace=3
@@ -38,13 +38,13 @@ let g:lightline = {
       \ 'colorscheme':'sonokai',
       \ }
 
-let g:sonoai_style = 'shusia'                                                                                
-let g:sonokai_enable_italic = 1                                                                         
+let g:sonoai_style = 'shusia'
+let g:sonokai_enable_italic = 1
 let g:sonokai_disable_italic_comment = 1
 
 let g:coc_global_extensions = [
-      \ 'coc-json', 
-      \ 'coc-git', 
+      \ 'coc-json',
+      \ 'coc-git',
       \ 'coc-rust-analyzer',
       \ 'coc-go',
       \ 'coc-pyright',
