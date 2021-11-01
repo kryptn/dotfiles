@@ -12,7 +12,5 @@ alias pbcopy="clip.exe"
 alias reload="source ~/.zshrc"
 
 alias tf="terraform"
-alias hc="http-client"
-
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
