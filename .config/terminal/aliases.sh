@@ -35,3 +35,11 @@ function mkenv() {
 function uuid(){
   python -c 'import uuid; print(str(uuid.uuid4()), end="")'
 }
+
+
+function gsc() {
+  rd="$HOME/git/github.com/$1"
+
+  [ ! -d "$rd" ] && git clone "git@github.com:$1" "$rd"
+  cd "$rd"
+}
