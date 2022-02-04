@@ -5,7 +5,7 @@
 
 # golang
 
-if command -v $HOME/go/bin/go &> /dev/null
+if command -v /usr/local/go/bin/go &> /dev/null
 then
     export PATH=$PATH:/usr/local/go/bin:/$HOME/go/bin
 fi
