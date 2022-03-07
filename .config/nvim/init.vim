@@ -16,6 +16,7 @@ Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'lewis6991/spellsitter.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'yamatsum/nvim-cursorline'
+Plug 'windwp/nvim-autopairs'
 
 call plug#end()
 
