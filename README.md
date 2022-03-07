@@ -12,4 +12,5 @@ then probably
 ./.bin/install/zsh.sh
 ./.bin/install/tailscale.sh
 ./.bin/install/rustup.sh
+./.bin/install/cargo-install.sh
 ```
