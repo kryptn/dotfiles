@@ -1,1 +1,1 @@
-sudo apt install zsh
+sudo apt install zsh libssl-dev
