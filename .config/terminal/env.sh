@@ -32,7 +32,6 @@ then
 fi
 
 
-
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -49,4 +48,9 @@ do
   export KUBECONFIG=$KUBECONFIG:$file
 done
 
+
+# gvm
+[[ -s "/home/david/.gvm/scripts/gvm" ]] && source "/home/david/.gvm/scripts/gvm"
+
+# work specific
 [ -s "$HOME/.config/terminal/work.sh" ] && \. "$HOME/.config/terminal/work.sh"
