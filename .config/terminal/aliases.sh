@@ -43,3 +43,7 @@ function gsc() {
   [ ! -d "$rd" ] && git clone "git@github.com:$1" "$rd"
   cd "$rd"
 }
+
+function ssm() {
+  aws ssm get-parameters --name $1 | jq '.Parameters[0].Value'
+}
