@@ -27,7 +27,6 @@ export PYTHONBREAKPOINT="pudb.set_trace"
 # rust
 if command -v $HOME/.cargo/bin/cargo &> /dev/null
 then
-
     export PATH="$HOME/.cargo/bin:$PATH"
 fi
 
@@ -42,7 +41,7 @@ export NVM_DIR="$HOME/.nvm"
 
 
 # kube contexts
-export KUBECONFIG=~/.kube/config
+export KUBECONFIG=""
 for file in ~/.kube/*.yaml
 do
   export KUBECONFIG=$KUBECONFIG:$file
@@ -54,3 +53,6 @@ done
 
 # work specific
 [ -s "$HOME/.config/terminal/work.sh" ] && \. "$HOME/.config/terminal/work.sh"
+
+# extra scripts
+export PATH="$HOME/.bin:$PATH"
