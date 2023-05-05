@@ -114,3 +114,6 @@ source ~/.config/terminal/aliases.sh
 [[ ! -f ~/.config/terminal/.p10k.zsh ]] || source ~/.config/terminal/.p10k.zsh
 # [ -f "/home/david/.ghcup/env" ] && source "/home/david/.ghcup/env" # ghcup-env
 # if [ -e /home/david/.nix-profile/etc/profile.d/nix.sh ]; then . /home/david/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+# Created by `pipx` on 2023-04-07 07:05:53
+export PATH="$PATH:/Users/david/.local/bin"

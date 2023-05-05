@@ -6,3 +6,5 @@ cargo install oha
 cargo install just
 cargo install hyperfine
 cargo install tokei
+cargo install cargo-get
+cargo install cargo-bump

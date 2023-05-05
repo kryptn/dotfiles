@@ -19,3 +19,9 @@
 
 [interactive]
     diffFilter = delta --color-only
+
+[alias]
+    unstage = restore --staged $1
+    undo-commit = reset --soft HEAD~1
+[pull]
+	rebase = false

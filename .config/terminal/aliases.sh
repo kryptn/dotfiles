@@ -16,6 +16,7 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias tf=terraform
 alias doco=docker-compose
 
+alias maelstrom='/Users/david/git/github.com/jepsen-io/maelstrom/release/maelstrom/maelstrom'
 
 function mkenv() {
   # creates a new virtualenv and sets it as local for this folder
