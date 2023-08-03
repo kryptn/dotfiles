@@ -59,3 +59,9 @@ done
 
 # extra scripts
 export PATH="$HOME/.bin:/home/david/.local/bin:$PATH"
+
+DELTA_PAGER="less -R"
+
+# i can't stand the aws cli pagination output
+# why would i want that
+export AWS_PAGER=""
