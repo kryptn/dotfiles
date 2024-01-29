@@ -3,6 +3,13 @@
 # nim
 # export PATH=/home/david/.nimble/bin:$PATH
 
+# direnv
+
+# if command -v /opt/homebrew/bin/direnv &> /dev/null
+# then
+#     eval "$(direnv hook zsh)"
+# fi
+
 # golang
 
 if command -v /usr/local/go/bin/go &> /dev/null

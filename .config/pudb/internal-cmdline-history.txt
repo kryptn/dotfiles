@@ -1,0 +1,6 @@
+field.annotation
+type(S3Settings)
+field.annotation = S3Settings
+field.annotation == S3Settings
+field.annotation
+q

@@ -1,6 +1,0 @@
-{
-  "rust-analyzer.inlayHints.enable": true,
-  "rust-analyzer.inlayHints.closingBraceHints.enable": true,
-  "rust-analyzer.inlayHints.chainingHints.enable": true
-  
-}
