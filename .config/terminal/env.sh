@@ -65,4 +65,4 @@ done
 [ -s "$HOME/.config/terminal/work.sh" ] && \. "$HOME/.config/terminal/work.sh"
 
 # extra scripts
-export PATH="$HOME/.bin:/home/david/.local/bin:$PATH"
+export PATH="$HOME/.bin:$HOME.local/bin:$PATH"

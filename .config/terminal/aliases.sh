@@ -14,7 +14,8 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 
 alias tf=terraform
-alias doco=docker-compose
+alias kc=kubectl
+alias doco='docker compose'
 
 alias maelstrom='/Users/david/git/github.com/jepsen-io/maelstrom/release/maelstrom/maelstrom'
 
