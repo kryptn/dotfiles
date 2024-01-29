@@ -117,3 +117,5 @@ source ~/.config/terminal/aliases.sh
 
 # Created by `pipx` on 2023-04-07 07:05:53
 export PATH="$PATH:/Users/david/.local/bin"
+# Created by `pipx` on 2023-03-02 17:46:19
+export PATH="$PATH:/Users/david.bibb/.local/bin"
