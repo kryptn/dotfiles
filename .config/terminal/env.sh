@@ -23,9 +23,8 @@ if command -v $HOME/.pyenv/bin/pyenv &> /dev/null
 then
     export PYENV_ROOT="$HOME/.pyenv"
     export PATH="$PYENV_ROOT/bin:$PATH"
-    eval "$(pyenv init --path)"
-    eval "$(pyenv init -)"
-    eval "$(pyenv virtualenv-init -)"
+    eval "$(pyenv init --path --no-rehash zsh)"
+    eval "$(pyenv virtualenv-init - zsh)"
 fi
 
 # set python breakpoint tool
@@ -60,6 +59,9 @@ done
 
 # gvm
 [[ -s "/home/david/.gvm/scripts/gvm" ]] && source "/home/david/.gvm/scripts/gvm"
+
+# brew
+[ -s /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # work specific
 [ -s "$HOME/.config/terminal/work.sh" ] && \. "$HOME/.config/terminal/work.sh"

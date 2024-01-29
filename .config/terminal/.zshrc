@@ -115,7 +115,6 @@ source ~/.config/terminal/aliases.sh
 # [ -f "/home/david/.ghcup/env" ] && source "/home/david/.ghcup/env" # ghcup-env
 # if [ -e /home/david/.nix-profile/etc/profile.d/nix.sh ]; then . /home/david/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
-# Created by `pipx` on 2023-04-07 07:05:53
-export PATH="$PATH:/Users/david/.local/bin"
-# Created by `pipx` on 2023-03-02 17:46:19
-export PATH="$PATH:/Users/david.bibb/.local/bin"
+export PATH="$PATH:$HOME/.local/bin"
+
+[[ -s "/Users/davidbibb/.gvm/scripts/gvm" ]] && source "/Users/davidbibb/.gvm/scripts/gvm"
