@@ -1,8 +1,9 @@
 #!/bin/bash
 
 python3_latest=`pyenv install --list | grep -v - | grep -v b | grep -v a | tail -1`
-pyenv install $python3_latest
-pyenv virtualenv $python3_latest neovim3
+
+version=`pyenv global`
+pyenv virtualenv $version neovim3
 
 pyenv activate neovim3
 

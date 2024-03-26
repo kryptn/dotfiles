@@ -34,6 +34,10 @@ export PYTHONBREAKPOINT="pudb.set_trace"
 if command -v $HOME/.cargo/bin/cargo &> /dev/null
 then
     export PATH="$HOME/.cargo/bin:$PATH"
+    if command -v $HOME/.cargo/bin/sccache &> /dev/null
+    then
+        export RUSTC_WRAPPER=$HOME/.cargo/bin/sccache
+    fi
 fi
 
 
@@ -56,6 +60,10 @@ do
   export KUBECONFIG=$KUBECONFIG:$file
 done
 
+if command -v direnv &> /dev/null 
+then
+    eval "$(direnv hook zsh)"
+fi
 
 # gvm
 [[ -s "/home/david/.gvm/scripts/gvm" ]] && source "/home/david/.gvm/scripts/gvm"
