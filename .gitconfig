@@ -41,3 +41,7 @@
 
 [includeIf "gitdir:~/git/github.com/CyberGRX/"]
     path = ~/.config/work/.gitconfig
+
+[includeIf "gitdir:~/git/"]
+    path = ~/.config/this-machine/.gitconfig
+
