@@ -4,10 +4,12 @@
 
 [init]
     defaultBranch = main
+
 [core]
     excludesFile = ~/.gitignore
     pager = delta
 	editor = nvim
+
 [diff]
     colorMoved = default
 
@@ -23,14 +25,19 @@
 [alias]
     unstage = restore --staged $1
     undo-commit = reset --soft HEAD~1
+    rr = !git restore --staged $1 && git restore $1
+
 [push]
     autoSetupRemote = true
+
 [pull]
 	rebase = false
-[push]
-	autoSetupRemote = true
+
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+
+[includeIf "gitdir:~/git/github.com/CyberGRX/"]
+    path = ~/.config/work/.gitconfig
