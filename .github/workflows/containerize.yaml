@@ -5,6 +5,10 @@ on:
 
 jobs:
   buildx:
+    permissions:
+      contents: read
+      packages: write
+
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -20,9 +24,9 @@ jobs:
         with:
           context: .
           file: ./.config/terminal/Dockerfile
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64
           push: true
-          tags: ${{ github.repository }}:latest
+          tags: ${{ github.repository }}:latest, ${{ github.repository }}:${{ github.sha }}
         env:
-          DOCKER_USERNAME: ${{ github.repository_owner }}
+          DOCKER_USERNAME: ${{ github.actor }}
           DOCKER_PASSWORD: ${{ github.token }}
