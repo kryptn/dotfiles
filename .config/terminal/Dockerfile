@@ -4,9 +4,10 @@ FROM bitnami/kubectl:1.20.9 as kubectl
 
 FROM ubuntu:latest
 
+
 RUN apt-get update && apt-get install -y apt-transport-https ca-certificates \
     curl bash sudo zsh git unzip
-
+RUN curl -fsSL https://tailscale.com/install.sh | sh
 
 
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" \
