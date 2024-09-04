@@ -17,15 +17,7 @@ then
     export PATH=$PATH:/usr/local/go/bin:/$HOME/go/bin
 fi
 
-# pyenv
 
-if command -v $HOME/.pyenv/bin/pyenv &> /dev/null
-then
-    export PYENV_ROOT="$HOME/.pyenv"
-    export PATH="$PYENV_ROOT/bin:$PATH"
-    eval "$(pyenv init --path --no-rehash zsh)"
-    eval "$(pyenv virtualenv-init - zsh)"
-fi
 
 # set python breakpoint tool
 export PYTHONBREAKPOINT="pudb.set_trace"
@@ -34,10 +26,10 @@ export PYTHONBREAKPOINT="pudb.set_trace"
 if command -v $HOME/.cargo/bin/cargo &> /dev/null
 then
     export PATH="$HOME/.cargo/bin:$PATH"
-    if command -v $HOME/.cargo/bin/sccache &> /dev/null
-    then
-        export RUSTC_WRAPPER=$HOME/.cargo/bin/sccache
-    fi
+    # if command -v $HOME/.cargo/bin/sccache &> /dev/null
+    # then
+    #     export RUSTC_WRAPPER=$HOME/.cargo/bin/sccache
+    # fi
 fi
 
 
@@ -60,7 +52,7 @@ do
   export KUBECONFIG=$KUBECONFIG:$file
 done
 
-if command -v direnv &> /dev/null 
+if command -v direnv &> /dev/null
 then
     eval "$(direnv hook zsh)"
 fi
@@ -74,6 +66,18 @@ fi
 # work specific
 [ -s "$HOME/.config/terminal/work.sh" ] && \. "$HOME/.config/terminal/work.sh"
 
+
+# pyenv
+
+if command -v $HOME/.pyenv/bin/pyenv &> /dev/null
+then
+    export PYENV_ROOT="$HOME/.pyenv"
+    export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init --path --no-rehash zsh)"
+    eval "$(pyenv virtualenv-init - zsh)"
+fi
+
+
 # extra scripts
 export PATH="$HOME/.bin:$HOME.local/bin:$PATH"
 
@@ -82,3 +86,8 @@ DELTA_PAGER="less -R"
 # i can't stand the aws cli pagination output
 # why would i want that
 export AWS_PAGER=""
+
+
+if [ "$(uname)" == "Darwin" ]; then
+    alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+fi
