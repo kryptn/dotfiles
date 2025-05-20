@@ -88,6 +88,6 @@ DELTA_PAGER="less -R"
 export AWS_PAGER=""
 
 
-if [ "$(uname)" == "Darwin" ]; then
+if [ "$(uname)" = "Darwin" ]; then
     alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 fi

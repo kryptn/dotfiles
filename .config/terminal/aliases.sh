@@ -46,6 +46,15 @@ function gsc() {
   cd "$rd"
 }
 
+function git-rb() {
+  default_branch=`git remote show origin | awk '/HEAD branch/ {print $NF}'`
+  this_branch=`git branch --show-current`
+  git checkout $default_branch
+  git pull
+  git branch -D $this_branch
+  git checkout -b $this_branch
+}
+
 function ssm() {
   aws ssm get-parameters --name $1 | jq '.Parameters[0].Value'
 }

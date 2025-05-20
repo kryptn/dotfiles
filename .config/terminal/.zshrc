@@ -83,6 +83,7 @@ source $ZSH/oh-my-zsh.sh
 source ~/.config/terminal/init.sh
 source ~/.config/terminal/env.sh
 source ~/.config/terminal/aliases.sh
+source ~/.config/terminal/aws.sh
 
 # User configuration
 

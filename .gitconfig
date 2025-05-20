@@ -26,6 +26,7 @@
     unstage = restore --staged $1
     undo-commit = reset --soft HEAD~1
     rr = !git restore --staged $1 && git restore $1
+    rb = git-rb $1
 
 [push]
     autoSetupRemote = true
