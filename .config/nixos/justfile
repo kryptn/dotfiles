@@ -1,0 +1,23 @@
+
+
+default_nixos_conf := "/home/david/.config/nixos"
+default_flake := "default"
+
+default:
+  just --list
+
+[doc('keep speakers awake')]
+speaker-keepalive:
+  #! /usr/bin/env bash
+  while true; do
+    pw-play /etc/nixos/preventStandbyHum.wav
+    echo "played keepalive $(date)"
+    sleep 300
+  done
+
+[doc('nixos-rebuild for flake at {{ nixos }}#{{ flake }}')]
+rb nixos=default_nixos_conf flake=default_flake:
+  #! /usr/bin/env bash
+  nix flake update --flake {{ nixos }} --log-format internal-json -v |& nom --json
+  echo "You might need sudo" 
+  sudo nixos-rebuild switch --upgrade --flake {{ nixos }}#{{ flake }} --log-format internal-json -v |& nom --json
