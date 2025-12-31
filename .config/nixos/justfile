@@ -16,8 +16,16 @@ speaker-keepalive:
   done
 
 [doc('nixos-rebuild for flake at {{ nixos }}#{{ flake }}')]
-rb nixos=default_nixos_conf flake=default_flake:
+rebuild nixos=default_nixos_conf flake=default_flake:
   #! /usr/bin/env bash
   nix flake update --flake {{ nixos }} --log-format internal-json -v |& nom --json
-  echo "You might need sudo" 
+  echo "You might need sudo"
   sudo nixos-rebuild switch --upgrade --flake {{ nixos }}#{{ flake }} --log-format internal-json -v |& nom --json
+
+
+  [doc('nixos-rebuild for flake at {{ nixos }}#{{ flake }}')]
+rebuild-boot nixos=default_nixos_conf flake=default_flake:
+  #! /usr/bin/env bash
+  nix flake update --flake {{ nixos }} --log-format internal-json -v |& nom --json
+  echo "You might need sudo"
+  sudo nixos-rebuild boot --upgrade --flake {{ nixos }}#{{ flake }} --log-format internal-json -v |& nom --json
