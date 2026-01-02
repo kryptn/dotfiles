@@ -58,6 +58,7 @@ in
     fzf # A command-line fuzzy finder
     just
     gh
+    bat
 
     # networking tools
     mtr # A network diagnostic tool
@@ -125,23 +126,26 @@ in
   # basic configuration of git, please change to your own
   programs.git = {
     enable = true;
-    userName = "kryptn";
-    userEmail = secrets.gitEmail;
-    delta = {
-      enable = true;
-      options = {
-        plus-style = "syntax #012800";
-        minus-style = "syntax #340001";
-        syntax-theme = "Monokai Extended";
-        navigate = true;
+    settings = {
+      user = {
+        name = "kryptn";
+        email = secrets.gitEmail;
       };
-    };
-
-    extraConfig = {
       init.defaultBranch = "main";
       core.editor = "vim";
       push.autoSetupRemote = true;
       pull.rebase = false;
+    };
+  };
+
+  programs.delta = {
+    enable = true;
+    enableGitIntegration = true;
+    options = {
+      plus-style = "syntax #012800";
+      minus-style = "syntax #340001";
+      syntax-theme = "Monokai Extended";
+      navigate = true;
     };
   };
 
