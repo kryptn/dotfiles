@@ -131,10 +131,23 @@ in
       "bluez5.enable-msbc" = true;
       "bluez5.enable-hw-volume" = true;
       "bluez5.roles" = [
+        "a2dp_sink"
+        "a2dp_source"
+        "bap_sink"
+        "bap_source"
         "hsp_hs"
         "hsp_ag"
         "hfp_hf"
         "hfp_ag"
+      ];
+      # High-quality codecs (requires device support)
+      "bluez5.codecs" = [
+        "ldac"
+        "aptx_hd"
+        "aptx"
+        "aac"
+        "sbc_xq"
+        "sbc"
       ];
     };
   };
